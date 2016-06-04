@@ -1,2 +1,2 @@
-# spike-focusable
-A spike to work out a focusable interaction I dreamed up.
+# Spike: Focusable
+> A spike to work out a focusable interaction I dreamed up.
