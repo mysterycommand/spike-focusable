@@ -24,5 +24,20 @@
   "bugs": {
     "url": "https://github.com/mysterycommand/spike-focusable/issues"
   },
-  "homepage": "https://github.com/mysterycommand/spike-focusable#readme"
+  "homepage": "https://github.com/mysterycommand/spike-focusable#readme",
+  "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-register": "^6.9.0",
+    "chai": "^3.5.0",
+    "eslint": "^2.11.1",
+    "glob": "^7.0.3",
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^2.0.0",
+    "lodash": "^4.13.1",
+    "mocha": "^2.5.3",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
 }
