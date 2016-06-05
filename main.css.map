@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///webpack:///source/main.scss?cebc"],"names":[],"mappings":"AAAA,eAGI,YACA,UAAY","file":"main.css","sourcesContent":["html,\nbody,\nmain {\n    height: 100%;\n    width: 100%;\n}\n\n\n\n/** WEBPACK FOOTER **\n ** webpack:///source/main.scss\n **/"],"sourceRoot":""}
