@@ -1,6 +1,152 @@
+$min-font-size: 16;
+$max-font-size: $min-font-size * 3;
+
+$min-screen-size: 320;
+$max-screen-size: 1200;
+
+$hex-body: #444;
+$hex-head: #222;
+
+$fam-body: HelveticaNeue-Light,
+          "Helvetica Neue Light",
+          "Helvetica Neue",
+           Helvetica,
+           Arial,
+          "Lucida Grande",
+           sans-serif;
+$fam-head: HelveticaNeue-UltraLight,
+          "Helvetica Neue UltraLight",
+           $fam-body;
+
+html {
+    font-size: calc(#{$min-font-size}px
+        + (#{$max-font-size} - #{$min-font-size})
+        * (100vw - #{$min-screen-size}px)
+        / (#{$max-screen-size} - #{$min-screen-size})
+    );
+}
+
 html,
 body,
 main {
     height: 100%;
     width: 100%;
+}
+
+body {
+    color: $hex-body;
+    font-family: $fam-body;
+    margin: 0;
+}
+
+main {
+    box-sizing: border-box;
+}
+
+header,
+section,
+footer {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    padding: 0 0.5em;
+    transition: all 0.3s ease-in-out;
+}
+
+header:focus,
+section:focus,
+footer:focus {
+    box-shadow: 0 0 4em rgba(0, 0, 0, 0.15);
+    outline: none;
+    padding: 0.25em 0.5em;
+    transition: all 0.3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: $hex-head;
+    font-weight: 100;
+}
+
+h2,
+h3,
+h4 {
+    font-family: $fam-body;
+}
+
+h1 {
+    font-family: $fam-head;
+    font-size: 4.2em;
+    margin: 0.1em 0;
+}
+
+h2 {
+    // background: cyan;
+    font-size: 1.4em;
+    margin: 0.5em 0;
+    position: relative;
+
+    &::after {
+        bottom: 0.2em;
+        content: '⌃';
+        display: block;
+        height: 0.8em;
+        position: absolute;
+        right: 0;
+        transform: rotateZ(180deg);
+    }
+}
+
+picture,
+img {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+address {
+    display: flex;
+    font-size: 0.9em;
+    font-style: normal;
+    justify-content: space-between;
+    margin: 0 0.1em 1em;
+
+    .direct a {
+        display: block;
+        text-decoration: none;
+    }
+
+    .social {
+        max-width: 4.8em;
+
+        li {
+            margin: 0.3em;
+        }
+
+        picture,
+        img {
+            height: 1.8em;
+            width: 1.8em;
+        }
+    }
+
+    .social a,
+    .social li {
+        display: inline-block;
+    }
+}
+
+ul,
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.section-content {
+    display: none;
+}
+
+footer {
+    font-size: 0.9em;
+    margin-top: 1em;
 }
