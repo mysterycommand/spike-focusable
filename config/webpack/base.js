@@ -3,8 +3,7 @@ import Text from 'extract-text-webpack-plugin';
 
 export default {
     entry: {
-        'main.js': './source/main.js',
-        'main.css': './source/main.scss',
+        main: './source/main.js',
     },
 
     module: {
@@ -17,7 +16,7 @@ export default {
                 presets: ['es2015'],
             },
         }, {
-            test: /\.scss$/,
+            test: /\.s?css$/,
             exclude: /node_modules/,
             loader: Text.extract('style', 'css?root=.&sourceMap!sass?' + JSON.stringify({
                 outputStyle: 'expanded',
@@ -29,7 +28,7 @@ export default {
     },
 
     output: {
-        filename: '[name]',
+        filename: '[name].js',
         publicPath: '',
     },
 
